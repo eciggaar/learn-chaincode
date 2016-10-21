@@ -73,7 +73,7 @@ func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args 
 
 	// Handle different functions
 	if function == "read" { //read a variable
-		t.read(stub, args)
+		return t.read(stub, args)
 	}
 	fmt.Println("query did not find func: " + function) //error
 
